@@ -1,28 +1,29 @@
-![Coders-Lab-1920px-no-background](https://user-images.githubusercontent.com/30623667/104709387-2b7ac180-571f-11eb-9b94-517aa6d501c9.png)
+# Task Manager/Time Tracker
 
-# Kilka ważnych informacji
+This is a task manager app that allows users to create, manage, 
+and track tasks and their operations. It provides an interface 
+for creating tasks, adding operations to tasks, updating task 
+and operation details, and deleting tasks and operations.
 
-Przed przystąpieniem do rozwiązywania zadań przeczytaj poniższe wskazówki
+The app utilizes a **RESTful API** provided by the Todo API service. 
+It communicates with the API to perform various operations such as:
+- retrieving tasks 
+- creating tasks and operations 
+- updating task and operation details 
+- deleting tasks and operations.
 
-## Jak zacząć?
+## Usage
+To use this app, you need to have access to the Todo API service. 
+Make sure to set the *apiHost* and *apiKey* variables in ***apiFunctions.js***
+file to match your API endpoint and authentication key.
 
-1. Stwórz [*fork*](https://guides.github.com/activities/forking/) repozytorium z zadaniami.
-2. Sklonuj fork repozytorium (stworzony w punkcie 1) na swój komputer. Użyj do tego komendy `git clone adres_repozytorium`
-Adres możesz znaleźć na stronie forka repozytorium po naciśnięciu w guzik "Clone or download".
-3. Rozwiąż zadania i skomituj zmiany do swojego repozytorium. Użyj do tego komend `git add nazwa_pliku`.
-Jeżeli chcesz dodać wszystkie zmienione pliki użyj `git add .` 
-Pamiętaj że kropka na końcu jest ważna!
-Następnie skommituj zmiany komendą `git commit -m "nazwa_commita"`
-4. Wypchnij zmiany do swojego repozytorium na GitHubie.  Użyj do tego komendy `git push origin main`
-5. Stwórz [*pull request*](https://help.github.com/articles/creating-a-pull-request) do oryginalnego repozytorium, gdy skończysz wszystkie zadania.
+Once the API configuration is set, you can run the app to interact with 
+the task manager interface. Please note that this app is for demonstration 
+purposes and may require additional error handling and input validation 
+to be production-ready.
 
-Poszczególne zadania rozwiązuj w odpowiednich plikach.
+Feel free to explore the code and customize it to suit your needs. 
+Enjoy using my Task Manager App!
 
-### Poszczególne zadania rozwiązuj w odpowiednich plikach.
-
-**Repozytorium z ćwiczeniami zostanie usunięte 2 tygodnie po zakończeniu kursu. Spowoduje to też usunięcie wszystkich forków, które są zrobione z tego repozytorium.**
-
-
-# Warsztat: JavaScript
-
-Tu znajdziesz pliki potrzebne do wykonania warsztatu.
+### Author
+*Mateusz Maciejak*
