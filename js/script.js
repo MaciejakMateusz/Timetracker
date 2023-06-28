@@ -1,5 +1,0 @@
-const apikey = '';
-const apihost = '';
-
-
-

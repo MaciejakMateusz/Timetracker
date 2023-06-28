@@ -14,7 +14,7 @@ taskTitleInput.addEventListener('input', function () {
     const errorMessage = taskAddingForm.querySelector('#error-message');
     const shortTitleError = taskAddingForm.querySelector('#short-title');
 
-    if(taskTitleInput.value.length >= 5) {
+    if (taskTitleInput.value.length >= 5) {
         if (shortTitleError) {
             shortTitleError.remove();
         }
