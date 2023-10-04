@@ -1,21 +1,21 @@
-export const apiHost = '';
-export const apiKey = '';
+export const apiHost = 'https://todo-api.coderslab.pl';
+export const apiKey = '79af2acf-bdf0-4343-96f3-443defd3981f';
 
 export function apiListTasks() {
     return fetch(`${apiHost}/api/tasks`,
         {
             headers: {Authorization: apiKey}
         })
-        .then(function (response) {
+        .then(response => {
             if (response.ok) {
                 return response.json();
             } else {
                 throw new Error('Connection with api/tasks failed')
             }
         })
-        .then(function (data) {
+        .then(data => {
             return data;
-        }).catch(function (error) {
+        }).catch(error => {
             console.log(error);
         });
 }
@@ -24,13 +24,13 @@ export function apiListOperationsForTask(taskId) {
     return fetch(`${apiHost}/api/tasks/${taskId}/operations`, {
         headers: {Authorization: apiKey}
     })
-        .then(function (response) {
+        .then(response => {
             if (response.ok) {
                 return response.json();
             } else {
                 throw new Error('Connection with api/tasks/.../operations failed');
             }
-        }).catch(function (error) {
+        }).catch(error => {
             console.log(error);
         });
 }
@@ -44,13 +44,13 @@ export function apiCreateTask(title, description) {
         },
         body: JSON.stringify({title: title, description: description, status: 'open'}),
         method: 'POST'
-    }).then(function (response) {
+    }).then(response => {
         if (response.ok) {
             return response.json();
         } else {
             throw new Error('Connection with api/tasks failed');
         }
-    }).catch(function (error) {
+    }).catch(error => {
         console.log(error);
     });
 }
@@ -63,13 +63,13 @@ export function apiCreateOperation(description, taskId) {
         },
         body: JSON.stringify({description: description, timeSpent: 0}),
         method: 'POST'
-    }).then(function (response) {
+    }).then(response => {
         if (response.ok) {
             return response.json();
         } else {
             throw new Error(`Connection with api/tasks/${taskId}/operations failed`);
         }
-    }).catch(function (error) {
+    }).catch(error => {
         console.log(error);
     });
 }
@@ -78,13 +78,13 @@ export function apiDeleteTask(taskId) {
     return fetch(`${apiHost}/api/tasks/${taskId}`, {
         headers: {Authorization: apiKey},
         method: 'DELETE'
-    }).then(function (response) {
+    }).then(response => {
         if (response.ok) {
             return response.json();
         } else {
             throw new Error('Connection with api/tasks failed');
         }
-    }).catch(function (error) {
+    }).catch(error => {
         console.log(error);
     });
 }
@@ -93,13 +93,13 @@ export function apiDeleteOperation(operationId) {
     return fetch(`${apiHost}/api/operations/${operationId}`, {
         headers: {Authorization: apiKey},
         method: 'DELETE'
-    }).then(function (response) {
+    }).then(response => {
         if (response.ok) {
             return response.json();
         } else {
             throw new Error('Connection with api/operations failed');
         }
-    }).catch(function (error) {
+    }).catch(error => {
         console.log(error)
     })
 }
@@ -112,13 +112,13 @@ export function apiUpdateOperation(operationId, description, timeSpent) {
         },
         body: JSON.stringify({description: description, timeSpent: timeSpent}),
         method: 'PUT'
-    }).then(function (response) {
+    }).then(response => {
         if (response.ok) {
             return response.json();
         } else {
             throw new Error('Connection with api/operations failed');
         }
-    }).catch(function (error) {
+    }).catch(error => {
         console.log(error);
     });
 }
@@ -131,13 +131,13 @@ export function apiUpdateTask(taskId, title, description, status) {
         },
         body: JSON.stringify({title: title, description: description, status: status}),
         method: 'PUT'
-    }).then(function (response) {
+    }).then(response => {
         if (response.ok) {
             return response.json();
         } else {
             throw new Error('Connection with api/tasks failed');
         }
-    }).catch(function (error) {
+    }).catch(error => {
         console.log(error);
     });
 }
