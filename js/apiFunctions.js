@@ -1,5 +1,5 @@
 export const apiHost = 'https://todo-api.coderslab.pl';
-export const apiKey = '79af2acf-bdf0-4343-96f3-443defd3981f';
+export const apiKey = '04ec235a-4af9-45a0-ab7b-583bfa93431b';
 
 export function apiListTasks() {
     return fetch(`${apiHost}/api/tasks`,
